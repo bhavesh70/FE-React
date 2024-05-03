@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar > li {
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.nav-bar {
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 20px;
+    width:350px;
+}
+
+.all-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-image {
+    width: 350px;
+    height: 210px;
+}
+
+.title-star {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.menu-price {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+} 
+
+.menu {
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 12px;
+}
