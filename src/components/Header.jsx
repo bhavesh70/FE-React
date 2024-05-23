@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import useOnlineStatus from "../utils/customHooks/useOnlineStatus";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
 const status = useOnlineStatus();
+
+const {loggedUser}= useContext(UserContext);
+
+const cartItem = useSelector((store) => store.cart.items)
+
+console.log("itmmmm ", cartItem);
 
 console.log("onna",status);
 let st;
@@ -23,7 +32,9 @@ if(status)
             <li><Link to="/">home</Link></li>
             <li><Link to="/about">about</Link></li>
             <li><Link to="/career">career</Link></li>
+            <li><Link to={"/cart"}>cart ({cartItem.length})</Link></li>
             <li><Link to="/contact">contact us</Link></li>
+            <li>{loggedUser}</li>
           </ul>
         </div>
       );
